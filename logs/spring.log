@@ -1,0 +1,906 @@
+2020-09-06 14:04:14.001  INFO 3153 --- [main] c.e.M.OfflineMessagingApiApplication     : Starting OfflineMessagingApiApplication on Merts-MacBook-Pro.local with PID 3153 (/Users/mertsariozkan/Desktop/MessagingAPI/target/classes started by mertsariozkan in /Users/mertsariozkan/Desktop/MessagingAPI)
+2020-09-06 14:04:14.021  INFO 3153 --- [main] c.e.M.OfflineMessagingApiApplication     : No active profile set, falling back to default profiles: default
+2020-09-06 14:04:14.981  INFO 3153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-09-06 14:04:15.063  INFO 3153 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76ms. Found 3 MongoDB repository interfaces.
+2020-09-06 14:04:15.350  INFO 3153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:04:15.352  INFO 3153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:04:15.356  INFO 3153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3ffb3598' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:04:15.358  INFO 3153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:04:15.360  INFO 3153 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:04:15.682  INFO 3153 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-06 14:04:15.695  INFO 3153 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-06 14:04:15.695  INFO 3153 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-06 14:04:15.789  INFO 3153 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-06 14:04:15.789  INFO 3153 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1676 ms
+2020-09-06 14:04:16.649  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
+2020-09-06 14:04:16.655  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten] MongoDB starting : pid=3154 port=58373 dbpath=/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-d81299e9-a2e8-4106-937a-c39d0ea35f8e 64-bit host=Merts-MacBook-Pro.local
+2020-09-06 14:04:16.656  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten] db version v3.5.5
+2020-09-06 14:04:16.656  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+2020-09-06 14:04:16.656  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten] allocator: system
+2020-09-06 14:04:16.656  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten] modules: none
+2020-09-06 14:04:16.656  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten] build environment:
+2020-09-06 14:04:16.656  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten]     distarch: x86_64
+2020-09-06 14:04:16.656  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-09-06 14:04:16.657  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.655+0300 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 58373 }, security: { authorization: "disabled" }, storage: { dbPath: "/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-d81299e9-a2e8-4106-937a-c39d0ea35f8e", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true }, syncPeriodSecs: 0.0 } }
+2020-09-06 14:04:16.669  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.669+0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=0,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+2020-09-06 14:04:16.919  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.919+0300 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2020-09-06 14:04:16.920  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.919+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:04:16.920  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.919+0300 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+2020-09-06 14:04:16.920  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.919+0300 I CONTROL  [initandlisten] **       Not recommended for production.
+2020-09-06 14:04:16.920  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.919+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:04:16.992  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:16.992+0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-d81299e9-a2e8-4106-937a-c39d0ea35f8e/diagnostic.data'
+2020-09-06 14:04:17.104  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.104+0300 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2020-09-06 14:04:17.105  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.104+0300 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:04:17.110  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.110+0300 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:04:17.110  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.110+0300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2020-09-06 14:04:17.111  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.111+0300 I NETWORK  [thread1] waiting for connections on port 58373
+2020-09-06 14:04:17.112  INFO 3153 --- [main] d.f.embed.mongo.MongodExecutable         : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@7dffda8b
+2020-09-06 14:04:17.435  INFO 3153 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:58373], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-09-06 14:04:17.435  INFO 3153 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:58373 to client view of cluster
+2020-09-06 14:04:17.474  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.473+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58381 #1 (1 connection now open)
+2020-09-06 14:04:17.481  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.481+0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:58381 conn1: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:04:17.490  INFO 3153 --- [cluster-ClusterId{value='5f54c2311f1b5b0d6575de54', description='null'}-localhost:58373] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:58373
+2020-09-06 14:04:17.493  INFO 3153 --- [cluster-ClusterId{value='5f54c2311f1b5b0d6575de54', description='null'}-localhost:58373] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:58373, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1058896}
+2020-09-06 14:04:17.494  INFO 3153 --- [cluster-ClusterId{value='5f54c2311f1b5b0d6575de54', description='null'}-localhost:58373] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-09-06 14:04:17.758  WARN 3153 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2020-09-06 14:04:17.795  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.795+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58382 #2 (2 connections now open)
+2020-09-06 14:04:17.796  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.796+0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:58382 conn2: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:04:17.800  INFO 3153 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:58373
+2020-09-06 14:04:17.941  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.941+0300 I INDEX    [conn2] build index on: test.chat_users properties: { v: 2, unique: true, key: { username: 1 }, name: "username", ns: "test.chat_users" }
+2020-09-06 14:04:17.942  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.941+0300 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:04:17.946  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.946+0300 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:04:17.946  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:04:17.946+0300 I COMMAND  [conn2] command test.$cmd command: createIndexes { createIndexes: "chat_users", indexes: [ { key: { username: 1 }, name: "username", ns: "test.chat_users", unique: true } ] } numYields:0 reslen:113 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 139ms
+2020-09-06 14:04:18.582  INFO 3153 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70b33256, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e952845, org.springframework.security.web.header.HeaderWriterFilter@2484dbb7, org.springframework.web.filter.CorsFilter@33d230ce, org.springframework.security.web.authentication.logout.LogoutFilter@5fb54740, com.example.MessagingAPI.security.AuthTokenFilter@7ca492d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fbf5db2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cbf1997, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35e74e08, org.springframework.security.web.session.SessionManagementFilter@68dfda77, org.springframework.security.web.access.ExceptionTranslationFilter@5a30722c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c5ca0b6]
+2020-09-06 14:04:18.651  INFO 3153 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:04:18.792  INFO 3153 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-06 14:04:18.802  INFO 3153 --- [main] c.e.M.OfflineMessagingApiApplication     : Started OfflineMessagingApiApplication in 5.459 seconds (JVM running for 6.621)
+2020-09-06 14:04:32.305  INFO 3153 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-06 14:04:32.306  INFO 3153 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-06 14:04:32.316  INFO 3153 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-09-06 14:04:33.111  INFO 3153 --- [http-nio-8080-exec-1] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'mert' registered successfully.
+2020-09-06 14:04:39.081  INFO 3153 --- [http-nio-8080-exec-3] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'selenay' registered successfully.
+2020-09-06 14:04:55.386  INFO 3153 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.UserService     : SEARCH OPERATION: 'er' has searched.
+2020-09-06 14:06:07.405  INFO 3153 --- [http-nio-8080-exec-8] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'ahmet' registered successfully.
+2020-09-06 14:06:10.918  INFO 3153 --- [http-nio-8080-exec-9] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'mehmet' registered successfully.
+2020-09-06 14:06:14.052  INFO 3153 --- [http-nio-8080-exec-10] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'hasan' registered successfully.
+2020-09-06 14:06:17.788  INFO 3153 --- [http-nio-8080-exec-2] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'selin' registered successfully.
+2020-09-06 14:06:20.815 ERROR 3153 --- [http-nio-8080-exec-1] c.e.M.controller.AuthController          : INVALID SIGNUP: 'selenay' username is already taken.
+2020-09-06 14:06:24.586  INFO 3153 --- [http-nio-8080-exec-4] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'hıdır' registered successfully.
+2020-09-06 14:06:31.541  INFO 3153 --- [http-nio-8080-exec-5] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'veli' registered successfully.
+2020-09-06 14:06:37.435  INFO 3153 --- [http-nio-8080-exec-6] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'şükrü' registered successfully.
+2020-09-06 14:06:42.049  INFO 3153 --- [http-nio-8080-exec-7] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'gizem' registered successfully.
+2020-09-06 14:06:46.564  INFO 3153 --- [http-nio-8080-exec-8] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'ayşe' registered successfully.
+2020-09-06 14:07:04.913 ERROR 3153 --- [http-nio-8080-exec-9] c.e.MessagingAPI.security.JwtUtils       : JWT token is expired: JWT expired at 2020-09-06T12:10:23Z. Current time: 2020-09-06T14:07:04Z, a difference of 7001888 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-09-06 14:07:04.921 ERROR 3153 --- [http-nio-8080-exec-9] c.e.M.security.AuthEntryPointJwt         : Unauthorized error: Full authentication is required to access this resource
+2020-09-06 14:07:14.443  INFO 3153 --- [http-nio-8080-exec-10] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:14.446  INFO 3153 --- [http-nio-8080-exec-10] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:28.977  INFO 3153 --- [http-nio-8080-exec-2] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:28.984  INFO 3153 --- [http-nio-8080-exec-2] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:33.945  INFO 3153 --- [http-nio-8080-exec-1] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:33.949  INFO 3153 --- [http-nio-8080-exec-1] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:39.722  INFO 3153 --- [http-nio-8080-exec-3] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:39.725  INFO 3153 --- [http-nio-8080-exec-3] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:43.494  INFO 3153 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:43.501  INFO 3153 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:47.082  INFO 3153 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:47.085  INFO 3153 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:49.776  INFO 3153 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:49.781  INFO 3153 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:50.519  INFO 3153 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:50.525  INFO 3153 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:54.387  INFO 3153 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:54.393  INFO 3153 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:56.966  INFO 3153 --- [http-nio-8080-exec-9] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:56.970  INFO 3153 --- [http-nio-8080-exec-9] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:07:57.523  INFO 3153 --- [http-nio-8080-exec-10] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:07:57.527  INFO 3153 --- [http-nio-8080-exec-10] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:08:00.532  INFO 3153 --- [http-nio-8080-exec-2] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:08:00.545  INFO 3153 --- [http-nio-8080-exec-2] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:08:01.093  INFO 3153 --- [http-nio-8080-exec-1] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:08:01.097  INFO 3153 --- [http-nio-8080-exec-1] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:08:01.680  INFO 3153 --- [http-nio-8080-exec-3] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:08:01.686  INFO 3153 --- [http-nio-8080-exec-3] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:08:08.520  INFO 3153 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:08:08.529  INFO 3153 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:08:09.793  INFO 3153 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:08:09.796  INFO 3153 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:08:17.269  INFO 3153 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:08:17.272  INFO 3153 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:10:37.497  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.497+0300 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2020-09-06 14:10:37.498  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.497+0300 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-09-06 14:10:37.498  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.497+0300 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2020-09-06 14:10:37.498  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.497+0300 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2020-09-06 14:10:37.498  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.497+0300 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-58373.sock
+2020-09-06 14:10:37.498  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.498+0300 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2020-09-06 14:10:37.498  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.498+0300 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-09-06 14:10:37.500  INFO 3153 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:10:37.500  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.500+0300 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-09-06 14:10:37.527  INFO 3153 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:2}] to localhost:58373 because the pool has been closed.
+2020-09-06 14:10:37.528  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.528+0300 I -        [conn2] end connection 127.0.0.1:58382 (2 connections now open)
+2020-09-06 14:10:37.529  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.529+0300 I -        [conn1] end connection 127.0.0.1:58381 (1 connection now open)
+2020-09-06 14:10:37.577  WARN 3153 --- [SpringContextShutdownHook] d.flapdoodle.embed.mongo.runtime.Mongod  : sendShutdown /127.0.0.1:58373
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:591) ~[na:na]
+	at de.flapdoodle.embed.mongo.runtime.Mongod.sendShutdown(Mongod.java:88) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.sendStopToMongoInstance(AbstractMongoProcess.java:133) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.stopInternal(AbstractMongoProcess.java:107) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.process.runtime.AbstractProcess.stop(AbstractProcess.java:177) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at de.flapdoodle.embed.process.runtime.Executable.stop(Executable.java:80) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+
+2020-09-06 14:10:37.668  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.668+0300 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-09-06 14:10:37.669  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.668+0300 I CONTROL  [signalProcessingThread] now exiting
+2020-09-06 14:10:37.669  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.668+0300 I CONTROL  [signalProcessingThread] shutting down with code:0
+2020-09-06 14:10:37.670  INFO 3153 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:37.668+0300 I CONTROL  [initandlisten] shutting down with code:0
+2020-09-06 14:10:37.678  WARN 3153 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod with db command, try next
+2020-09-06 14:10:37.712  INFO 3153 --- [SpringContextShutdownHook] d.f.e.process.runtime.ProcessControl     : execSuccess: false [kill, -2, 3154]
+2020-09-06 14:10:37.712  WARN 3153 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod, try next
+2020-09-06 14:10:37.712  WARN 3153 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod the second time, try one last thing
+2020-09-06 14:10:42.937  INFO 3163 --- [main] c.e.M.OfflineMessagingApiApplication     : Starting OfflineMessagingApiApplication on Merts-MacBook-Pro.local with PID 3163 (/Users/mertsariozkan/Desktop/MessagingAPI/target/classes started by mertsariozkan in /Users/mertsariozkan/Desktop/MessagingAPI)
+2020-09-06 14:10:42.940  INFO 3163 --- [main] c.e.M.OfflineMessagingApiApplication     : No active profile set, falling back to default profiles: default
+2020-09-06 14:10:43.649  INFO 3163 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-09-06 14:10:43.715  INFO 3163 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 3 MongoDB repository interfaces.
+2020-09-06 14:10:43.985  INFO 3163 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:10:43.987  INFO 3163 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:10:43.988  INFO 3163 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@36c0d0bd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:10:43.991  INFO 3163 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:10:43.993  INFO 3163 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:10:44.222  INFO 3163 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-06 14:10:44.234  INFO 3163 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-06 14:10:44.234  INFO 3163 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-06 14:10:44.360  INFO 3163 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-06 14:10:44.360  INFO 3163 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1370 ms
+2020-09-06 14:10:45.214  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
+2020-09-06 14:10:45.220  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.219+0300 I CONTROL  [initandlisten] MongoDB starting : pid=3164 port=58485 dbpath=/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-4ae8e1f6-3991-4ab5-bd16-e1db5309c91e 64-bit host=Merts-MacBook-Pro.local
+2020-09-06 14:10:45.220  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten] db version v3.5.5
+2020-09-06 14:10:45.220  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+2020-09-06 14:10:45.221  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten] allocator: system
+2020-09-06 14:10:45.221  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten] modules: none
+2020-09-06 14:10:45.221  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten] build environment:
+2020-09-06 14:10:45.221  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten]     distarch: x86_64
+2020-09-06 14:10:45.221  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-09-06 14:10:45.221  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.220+0300 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 58485 }, security: { authorization: "disabled" }, storage: { dbPath: "/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-4ae8e1f6-3991-4ab5-bd16-e1db5309c91e", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true }, syncPeriodSecs: 0.0 } }
+2020-09-06 14:10:45.222  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.221+0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=0,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+2020-09-06 14:10:45.456  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.456+0300 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2020-09-06 14:10:45.457  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.456+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:10:45.457  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.456+0300 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+2020-09-06 14:10:45.457  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.456+0300 I CONTROL  [initandlisten] **       Not recommended for production.
+2020-09-06 14:10:45.457  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.456+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:10:45.529  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.528+0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-4ae8e1f6-3991-4ab5-bd16-e1db5309c91e/diagnostic.data'
+2020-09-06 14:10:45.636  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.635+0300 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2020-09-06 14:10:45.636  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.635+0300 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:10:45.641  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.641+0300 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:10:45.641  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.641+0300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2020-09-06 14:10:45.642  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.641+0300 I NETWORK  [thread1] waiting for connections on port 58485
+2020-09-06 14:10:45.642  INFO 3163 --- [main] d.f.embed.mongo.MongodExecutable         : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@65cf4d6d
+2020-09-06 14:10:45.887  INFO 3163 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:58485], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-09-06 14:10:45.888  INFO 3163 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:58485 to client view of cluster
+2020-09-06 14:10:45.926  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.925+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58490 #1 (1 connection now open)
+2020-09-06 14:10:45.932  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:45.932+0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:58490 conn1: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:10:45.943  INFO 3163 --- [cluster-ClusterId{value='5f54c3b51a83a009e7626253', description='null'}-localhost:58485] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:58485
+2020-09-06 14:10:45.945  INFO 3163 --- [cluster-ClusterId{value='5f54c3b51a83a009e7626253', description='null'}-localhost:58485] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:58485, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1101371}
+2020-09-06 14:10:45.946  INFO 3163 --- [cluster-ClusterId{value='5f54c3b51a83a009e7626253', description='null'}-localhost:58485] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-09-06 14:10:46.108  WARN 3163 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2020-09-06 14:10:46.148  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:46.147+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58491 #2 (2 connections now open)
+2020-09-06 14:10:46.148  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:46.148+0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:58491 conn2: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:10:46.152  INFO 3163 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:58485
+2020-09-06 14:10:46.261  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:46.261+0300 I INDEX    [conn2] build index on: test.chat_users properties: { v: 2, unique: true, key: { username: 1 }, name: "username", ns: "test.chat_users" }
+2020-09-06 14:10:46.262  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:46.261+0300 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:10:46.266  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:46.266+0300 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:10:46.266  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:10:46.266+0300 I COMMAND  [conn2] command test.$cmd command: createIndexes { createIndexes: "chat_users", indexes: [ { key: { username: 1 }, name: "username", ns: "test.chat_users", unique: true } ] } numYields:0 reslen:113 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 105ms
+2020-09-06 14:10:56.372  INFO 3163 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4afd65fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@25e8e59, org.springframework.security.web.header.HeaderWriterFilter@7b377a53, org.springframework.web.filter.CorsFilter@141aba65, org.springframework.security.web.authentication.logout.LogoutFilter@46d0f89c, com.example.MessagingAPI.security.AuthTokenFilter@2ee4706d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50a7c72b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63e4484d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3356ff58, org.springframework.security.web.session.SessionManagementFilter@305b43ca, org.springframework.security.web.access.ExceptionTranslationFilter@45b7c97f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37a67cf]
+2020-09-06 14:10:56.441  INFO 3163 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:10:56.558  INFO 3163 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-06 14:10:56.562  INFO 3163 --- [main] c.e.M.OfflineMessagingApiApplication     : Started OfflineMessagingApiApplication in 14.185 seconds (JVM running for 16.039)
+2020-09-06 14:11:07.516  INFO 3163 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-06 14:11:07.516  INFO 3163 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-06 14:11:07.533  INFO 3163 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-09-06 14:11:18.857 ERROR 3163 --- [http-nio-8080-exec-1] c.e.M.security.AuthTokenFilter           : Cannot set user authentication: {}
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: User Not Found with username: selenay
+	at com.example.MessagingAPI.service.UserDetailsServiceImpl.lambda$loadUserByUsername$0(UserDetailsServiceImpl.java:24) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408) ~[na:na]
+	at com.example.MessagingAPI.service.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:24) ~[classes/:na]
+	at com.example.MessagingAPI.security.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:38) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2020-09-06 14:11:21.696 ERROR 3163 --- [http-nio-8080-exec-1] c.e.M.security.AuthEntryPointJwt         : Unauthorized error: Full authentication is required to access this resource
+2020-09-06 14:11:35.393  INFO 3163 --- [http-nio-8080-exec-3] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'mert' registered successfully.
+2020-09-06 14:11:49.154  INFO 3163 --- [http-nio-8080-exec-4] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'selenay' registered successfully.
+2020-09-06 14:12:06.610  INFO 3163 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:06.613  INFO 3163 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:08.044  INFO 3163 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:08.047  INFO 3163 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:08.650  INFO 3163 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:08.653  INFO 3163 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:09.255  INFO 3163 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:09.259  INFO 3163 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:14.703  INFO 3163 --- [http-nio-8080-exec-9] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:14.706  INFO 3163 --- [http-nio-8080-exec-9] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:15.016  INFO 3163 --- [http-nio-8080-exec-10] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:15.018  INFO 3163 --- [http-nio-8080-exec-10] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:15.601  INFO 3163 --- [http-nio-8080-exec-2] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:15.604  INFO 3163 --- [http-nio-8080-exec-2] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:16.039  INFO 3163 --- [http-nio-8080-exec-1] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:16.042  INFO 3163 --- [http-nio-8080-exec-1] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:21.667  INFO 3163 --- [http-nio-8080-exec-3] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:21.673  INFO 3163 --- [http-nio-8080-exec-3] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:22.261  INFO 3163 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:22.264  INFO 3163 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:23.327  INFO 3163 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:23.332  INFO 3163 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:30.761  INFO 3163 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:30.769  INFO 3163 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:31.141  INFO 3163 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:31.144  INFO 3163 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:12:31.825  INFO 3163 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:12:31.828  INFO 3163 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:16:00.108  INFO 3163 --- [http-nio-8080-exec-6] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'hıdır' registered successfully.
+2020-09-06 14:16:03.404  INFO 3163 --- [http-nio-8080-exec-7] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'dobby' registered successfully.
+2020-09-06 14:16:06.882  INFO 3163 --- [http-nio-8080-exec-8] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'kuşum' registered successfully.
+2020-09-06 14:16:10.049  INFO 3163 --- [http-nio-8080-exec-9] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'sütüm' registered successfully.
+2020-09-06 14:16:19.628  INFO 3163 --- [http-nio-8080-exec-10] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'şeşenay' registered successfully.
+2020-09-06 14:16:22.148  INFO 3163 --- [http-nio-8080-exec-2] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'dilek' registered successfully.
+2020-09-06 14:16:25.654  INFO 3163 --- [http-nio-8080-exec-1] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'simge' registered successfully.
+2020-09-06 14:16:28.658  INFO 3163 --- [http-nio-8080-exec-3] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'rıfkı' registered successfully.
+2020-09-06 14:16:43.966  INFO 3163 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'şeşenay'.
+2020-09-06 14:16:43.968  INFO 3163 --- [http-nio-8080-exec-4] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'şeşenay' has a new message from mert.
+2020-09-06 14:16:46.861  INFO 3163 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'dobby'.
+2020-09-06 14:16:46.863  INFO 3163 --- [http-nio-8080-exec-5] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'dobby' has a new message from mert.
+2020-09-06 14:16:50.527  INFO 3163 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'hıdır'.
+2020-09-06 14:16:50.529  INFO 3163 --- [http-nio-8080-exec-6] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'hıdır' has a new message from mert.
+2020-09-06 14:16:58.216  INFO 3163 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'dilek'.
+2020-09-06 14:16:58.221  INFO 3163 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'dilek' has a new message from mert.
+2020-09-06 14:17:04.350  INFO 3163 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'sütüm'.
+2020-09-06 14:17:04.357  INFO 3163 --- [http-nio-8080-exec-8] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'sütüm' has a new message from mert.
+2020-09-06 14:17:08.470  INFO 3163 --- [http-nio-8080-exec-9] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'kuşum'.
+2020-09-06 14:17:08.475  INFO 3163 --- [http-nio-8080-exec-9] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'kuşum' has a new message from mert.
+2020-09-06 14:18:21.055  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.055+0300 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2020-09-06 14:18:21.056  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.055+0300 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-09-06 14:18:21.056  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.055+0300 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2020-09-06 14:18:21.056  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.055+0300 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2020-09-06 14:18:21.056  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.055+0300 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-58485.sock
+2020-09-06 14:18:21.057  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.056+0300 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2020-09-06 14:18:21.057  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.056+0300 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-09-06 14:18:21.059  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.058+0300 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-09-06 14:18:21.059  INFO 3163 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:18:21.079  INFO 3163 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:2}] to localhost:58485 because the pool has been closed.
+2020-09-06 14:18:21.083  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.082+0300 I -        [conn2] end connection 127.0.0.1:58491 (2 connections now open)
+2020-09-06 14:18:21.085  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.084+0300 I -        [conn1] end connection 127.0.0.1:58490 (1 connection now open)
+2020-09-06 14:18:21.092  WARN 3163 --- [SpringContextShutdownHook] d.flapdoodle.embed.mongo.runtime.Mongod  : sendShutdown /127.0.0.1:58485
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:591) ~[na:na]
+	at de.flapdoodle.embed.mongo.runtime.Mongod.sendShutdown(Mongod.java:88) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.sendStopToMongoInstance(AbstractMongoProcess.java:133) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.stopInternal(AbstractMongoProcess.java:107) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.process.runtime.AbstractProcess.stop(AbstractProcess.java:177) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at de.flapdoodle.embed.process.runtime.Executable.stop(Executable.java:80) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+
+2020-09-06 14:18:21.194  WARN 3163 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod with db command, try next
+2020-09-06 14:18:21.230  INFO 3163 --- [SpringContextShutdownHook] d.f.e.process.runtime.ProcessControl     : execSuccess: true [kill, -2, 3164]
+2020-09-06 14:18:21.230  INFO 3163 --- [SpringContextShutdownHook] d.f.e.process.runtime.ProcessControl     : stopOrDestroyProcess: process hasn't exited 
+2020-09-06 14:18:21.239  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.234+0300 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-09-06 14:18:21.243  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.235+0300 I CONTROL  [signalProcessingThread] now exiting
+2020-09-06 14:18:21.244  INFO 3163 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:18:21.235+0300 I CONTROL  [signalProcessingThread] shutting down with code:0
+2020-09-06 14:20:11.311  INFO 3203 --- [main] c.e.M.OfflineMessagingApiApplication     : Starting OfflineMessagingApiApplication on Merts-MacBook-Pro.local with PID 3203 (/Users/mertsariozkan/Desktop/MessagingAPI/target/classes started by mertsariozkan in /Users/mertsariozkan/Desktop/MessagingAPI)
+2020-09-06 14:20:11.321  INFO 3203 --- [main] c.e.M.OfflineMessagingApiApplication     : No active profile set, falling back to default profiles: default
+2020-09-06 14:20:12.185  INFO 3203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-09-06 14:20:12.251  INFO 3203 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 3 MongoDB repository interfaces.
+2020-09-06 14:20:12.511  INFO 3203 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:20:12.513  INFO 3203 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:20:12.515  INFO 3203 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@680a66dd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:20:12.517  INFO 3203 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:20:12.519  INFO 3203 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:20:12.767  INFO 3203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-06 14:20:12.776  INFO 3203 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-06 14:20:12.777  INFO 3203 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-06 14:20:12.890  INFO 3203 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-06 14:20:12.890  INFO 3203 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1510 ms
+2020-09-06 14:20:13.816  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
+2020-09-06 14:20:13.823  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten] MongoDB starting : pid=3204 port=58601 dbpath=/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-d0cda6d6-e8fe-4615-9499-989d6628faab 64-bit host=Merts-MacBook-Pro.local
+2020-09-06 14:20:13.824  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten] db version v3.5.5
+2020-09-06 14:20:13.824  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+2020-09-06 14:20:13.824  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten] allocator: system
+2020-09-06 14:20:13.824  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten] modules: none
+2020-09-06 14:20:13.825  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten] build environment:
+2020-09-06 14:20:13.825  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten]     distarch: x86_64
+2020-09-06 14:20:13.825  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-09-06 14:20:13.825  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.823+0300 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 58601 }, security: { authorization: "disabled" }, storage: { dbPath: "/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-d0cda6d6-e8fe-4615-9499-989d6628faab", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true }, syncPeriodSecs: 0.0 } }
+2020-09-06 14:20:13.825  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:13.824+0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=0,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+2020-09-06 14:20:14.092  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.092+0300 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2020-09-06 14:20:14.093  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.092+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:20:14.093  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.092+0300 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+2020-09-06 14:20:14.093  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.092+0300 I CONTROL  [initandlisten] **       Not recommended for production.
+2020-09-06 14:20:14.093  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.092+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:20:14.163  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.163+0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-d0cda6d6-e8fe-4615-9499-989d6628faab/diagnostic.data'
+2020-09-06 14:20:14.267  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.266+0300 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2020-09-06 14:20:14.267  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.266+0300 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:20:14.271  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.271+0300 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:20:14.272  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.272+0300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2020-09-06 14:20:14.273  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.272+0300 I NETWORK  [thread1] waiting for connections on port 58601
+2020-09-06 14:20:14.273  INFO 3203 --- [main] d.f.embed.mongo.MongodExecutable         : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@2cd4e16a
+2020-09-06 14:20:14.550  INFO 3203 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:58601], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-09-06 14:20:14.551  INFO 3203 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:58601 to client view of cluster
+2020-09-06 14:20:14.595  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.595+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58603 #1 (1 connection now open)
+2020-09-06 14:20:14.603  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.603+0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:58603 conn1: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:20:14.619  INFO 3203 --- [cluster-ClusterId{value='5f54c5ee8fd7947853622593', description='null'}-localhost:58601] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:58601
+2020-09-06 14:20:14.626  INFO 3203 --- [cluster-ClusterId{value='5f54c5ee8fd7947853622593', description='null'}-localhost:58601] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:58601, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=4172870}
+2020-09-06 14:20:14.628  INFO 3203 --- [cluster-ClusterId{value='5f54c5ee8fd7947853622593', description='null'}-localhost:58601] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-09-06 14:20:14.925  WARN 3203 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2020-09-06 14:20:14.966  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.966+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58605 #2 (2 connections now open)
+2020-09-06 14:20:14.967  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:14.967+0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:58605 conn2: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:20:14.969  INFO 3203 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:58601
+2020-09-06 14:20:15.090  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:15.090+0300 I INDEX    [conn2] build index on: messaging_db.chat_users properties: { v: 2, unique: true, key: { username: 1 }, name: "username", ns: "messaging_db.chat_users" }
+2020-09-06 14:20:15.091  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:15.090+0300 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:20:15.094  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:15.094+0300 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:20:15.095  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:20:15.094+0300 I COMMAND  [conn2] command messaging_db.$cmd command: createIndexes { createIndexes: "chat_users", indexes: [ { key: { username: 1 }, name: "username", ns: "messaging_db.chat_users", unique: true } ] } numYields:0 reslen:113 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 115ms
+2020-09-06 14:20:15.638  INFO 3203 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@283a8ad6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f213a2, org.springframework.security.web.header.HeaderWriterFilter@24e5389c, org.springframework.web.filter.CorsFilter@59e082f8, org.springframework.security.web.authentication.logout.LogoutFilter@45287377, com.example.MessagingAPI.security.AuthTokenFilter@2dfa02c1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a47730c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b5021d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7185e611, org.springframework.security.web.session.SessionManagementFilter@78b0ec3a, org.springframework.security.web.access.ExceptionTranslationFilter@6f315b08, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f172892]
+2020-09-06 14:20:15.689  INFO 3203 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:20:15.788  INFO 3203 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-06 14:20:15.792  INFO 3203 --- [main] c.e.M.OfflineMessagingApiApplication     : Started OfflineMessagingApiApplication in 5.01 seconds (JVM running for 6.018)
+2020-09-06 14:20:30.537  INFO 3203 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-06 14:20:30.538  INFO 3203 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-06 14:20:30.546  INFO 3203 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-09-06 14:20:31.282  INFO 3203 --- [http-nio-8080-exec-1] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'mert' registered successfully.
+2020-09-06 14:20:41.643  INFO 3203 --- [http-nio-8080-exec-3] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'selenay' registered successfully.
+2020-09-06 14:20:46.550  INFO 3203 --- [http-nio-8080-exec-4] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'hıdır' registered successfully.
+2020-09-06 14:20:52.386  INFO 3203 --- [http-nio-8080-exec-5] c.e.M.controller.AuthController          : SUCCESSFUL SIGNUP: 'dilek' registered successfully.
+2020-09-06 14:20:59.797  INFO 3203 --- [http-nio-8080-exec-6] c.e.M.controller.AuthController          : SUCCESSFUL LOGIN: 'selenay' logged in successfully.
+2020-09-06 14:21:18.575  INFO 3203 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE NOTIFICATION: 'New message from mert' notification is created for user 'selenay'.
+2020-09-06 14:21:18.579  INFO 3203 --- [http-nio-8080-exec-7] c.e.MessagingAPI.service.ChatService     : MESSAGE SENT: 'selenay' has a new message from mert.
+2020-09-06 14:22:05.305  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.305+0300 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2020-09-06 14:22:05.306  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.305+0300 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-09-06 14:22:05.307  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.305+0300 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2020-09-06 14:22:05.307  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.306+0300 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2020-09-06 14:22:05.307  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.306+0300 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-58601.sock
+2020-09-06 14:22:05.307  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.307+0300 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2020-09-06 14:22:05.307  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.307+0300 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-09-06 14:22:05.310  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.309+0300 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-09-06 14:22:05.310  INFO 3203 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:22:05.331  INFO 3203 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:2}] to localhost:58601 because the pool has been closed.
+2020-09-06 14:22:05.333  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.333+0300 I -        [conn2] end connection 127.0.0.1:58605 (2 connections now open)
+2020-09-06 14:22:05.337  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.336+0300 I -        [conn1] end connection 127.0.0.1:58603 (1 connection now open)
+2020-09-06 14:22:05.354  WARN 3203 --- [SpringContextShutdownHook] d.flapdoodle.embed.mongo.runtime.Mongod  : sendShutdown /127.0.0.1:58601
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:591) ~[na:na]
+	at de.flapdoodle.embed.mongo.runtime.Mongod.sendShutdown(Mongod.java:88) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.sendStopToMongoInstance(AbstractMongoProcess.java:133) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.stopInternal(AbstractMongoProcess.java:107) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.process.runtime.AbstractProcess.stop(AbstractProcess.java:177) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at de.flapdoodle.embed.process.runtime.Executable.stop(Executable.java:80) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+
+2020-09-06 14:22:05.456  WARN 3203 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod with db command, try next
+2020-09-06 14:22:05.488  INFO 3203 --- [SpringContextShutdownHook] d.f.e.process.runtime.ProcessControl     : execSuccess: true [kill, -2, 3204]
+2020-09-06 14:22:05.488  INFO 3203 --- [SpringContextShutdownHook] d.f.e.process.runtime.ProcessControl     : stopOrDestroyProcess: process hasn't exited 
+2020-09-06 14:22:05.489  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.489+0300 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-09-06 14:22:05.490  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.489+0300 I CONTROL  [signalProcessingThread] now exiting
+2020-09-06 14:22:05.490  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.489+0300 I CONTROL  [signalProcessingThread] shutting down with code:0
+2020-09-06 14:22:05.490  INFO 3203 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:22:05.489+0300 I CONTROL  [initandlisten] shutting down with code:0
+2020-09-06 14:23:11.026  INFO 3216 --- [main] c.e.M.OfflineMessagingApiApplication     : Starting OfflineMessagingApiApplication on Merts-MacBook-Pro.local with PID 3216 (/Users/mertsariozkan/Desktop/MessagingAPI/target/classes started by mertsariozkan in /Users/mertsariozkan/Desktop/MessagingAPI)
+2020-09-06 14:23:11.029  INFO 3216 --- [main] c.e.M.OfflineMessagingApiApplication     : No active profile set, falling back to default profiles: default
+2020-09-06 14:23:11.731  INFO 3216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-09-06 14:23:11.792  INFO 3216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 3 MongoDB repository interfaces.
+2020-09-06 14:23:12.030  INFO 3216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:23:12.032  INFO 3216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:23:12.034  INFO 3216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@54657dd2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:23:12.036  INFO 3216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:23:12.038  INFO 3216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:23:12.258  INFO 3216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-06 14:23:12.277  INFO 3216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-06 14:23:12.278  INFO 3216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-06 14:23:12.581  INFO 3216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-06 14:23:12.582  INFO 3216 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1488 ms
+2020-09-06 14:23:14.833  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
+2020-09-06 14:23:14.853  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.850+0300 I CONTROL  [initandlisten] MongoDB starting : pid=3217 port=58690 dbpath=/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-b8ef72b8-8d12-45b4-97c5-2ee2cfb52600 64-bit host=Merts-MacBook-Pro.local
+2020-09-06 14:23:14.854  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten] db version v3.5.5
+2020-09-06 14:23:14.854  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+2020-09-06 14:23:14.855  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten] allocator: system
+2020-09-06 14:23:14.855  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten] modules: none
+2020-09-06 14:23:14.855  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten] build environment:
+2020-09-06 14:23:14.856  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten]     distarch: x86_64
+2020-09-06 14:23:14.856  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-09-06 14:23:14.857  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.852+0300 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 58690 }, security: { authorization: "disabled" }, storage: { dbPath: "/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-b8ef72b8-8d12-45b4-97c5-2ee2cfb52600", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true }, syncPeriodSecs: 0.0 } }
+2020-09-06 14:23:14.861  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:14.860+0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=0,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+2020-09-06 14:23:15.166  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.166+0300 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2020-09-06 14:23:15.168  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.166+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:23:15.170  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.166+0300 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+2020-09-06 14:23:15.171  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.166+0300 I CONTROL  [initandlisten] **       Not recommended for production.
+2020-09-06 14:23:15.172  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.166+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:23:15.248  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.248+0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-b8ef72b8-8d12-45b4-97c5-2ee2cfb52600/diagnostic.data'
+2020-09-06 14:23:15.373  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.372+0300 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2020-09-06 14:23:15.373  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.373+0300 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:23:15.379  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.379+0300 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:23:15.380  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.380+0300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2020-09-06 14:23:15.381  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:15.380+0300 I NETWORK  [thread1] waiting for connections on port 58690
+2020-09-06 14:23:15.382  INFO 3216 --- [main] d.f.embed.mongo.MongodExecutable         : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@2dbfcf7
+2020-09-06 14:23:16.020  INFO 3216 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:58690], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-09-06 14:23:16.021  INFO 3216 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:58690 to client view of cluster
+2020-09-06 14:23:16.107  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.107+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58695 #1 (1 connection now open)
+2020-09-06 14:23:16.126  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.125+0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:58695 conn1: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:23:16.150  INFO 3216 --- [cluster-ClusterId{value='5f54c6a44fae954f9edafd34', description='null'}-localhost:58690] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:58690
+2020-09-06 14:23:16.156  INFO 3216 --- [cluster-ClusterId{value='5f54c6a44fae954f9edafd34', description='null'}-localhost:58690] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:58690, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2319201}
+2020-09-06 14:23:16.158  INFO 3216 --- [cluster-ClusterId{value='5f54c6a44fae954f9edafd34', description='null'}-localhost:58690] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-09-06 14:23:16.741  WARN 3216 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2020-09-06 14:23:16.812  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.812+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58696 #2 (2 connections now open)
+2020-09-06 14:23:16.813  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.813+0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:58696 conn2: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:23:16.818  INFO 3216 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:58690
+2020-09-06 14:23:16.949  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.949+0300 I INDEX    [conn2] build index on: messaging_db.chat_users properties: { v: 2, unique: true, key: { username: 1 }, name: "username", ns: "messaging_db.chat_users" }
+2020-09-06 14:23:16.951  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.949+0300 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:23:16.954  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.954+0300 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:23:16.955  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:23:16.954+0300 I COMMAND  [conn2] command messaging_db.$cmd command: createIndexes { createIndexes: "chat_users", indexes: [ { key: { username: 1 }, name: "username", ns: "messaging_db.chat_users", unique: true } ] } numYields:0 reslen:113 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 120ms
+2020-09-06 14:23:18.218  INFO 3216 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b8507df, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ae8fb2a, org.springframework.security.web.header.HeaderWriterFilter@3915e7c3, org.springframework.web.filter.CorsFilter@5ed25612, org.springframework.security.web.authentication.logout.LogoutFilter@55c1ced9, com.example.MessagingAPI.security.AuthTokenFilter@bbb6f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20216016, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a47730c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@451816fd, org.springframework.security.web.session.SessionManagementFilter@48cdb156, org.springframework.security.web.access.ExceptionTranslationFilter@105db94d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bdb5e0f]
+2020-09-06 14:23:18.408  INFO 3216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:23:18.775  INFO 3216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-06 14:23:18.784  INFO 3216 --- [main] c.e.M.OfflineMessagingApiApplication     : Started OfflineMessagingApiApplication in 8.267 seconds (JVM running for 9.396)
+2020-09-06 14:23:21.856  INFO 3216 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-06 14:23:21.857  INFO 3216 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-06 14:23:21.911  INFO 3216 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 53 ms
+2020-09-06 14:23:23.375 ERROR 3216 --- [http-nio-8080-exec-2] c.e.M.controller.AuthController          : INVALID LOGIN: 'selenay' couldn't login.
+2020-09-06 14:23:26.774 ERROR 3216 --- [http-nio-8080-exec-3] c.e.M.controller.AuthController          : INVALID LOGIN: 'selenay' couldn't login.
+2020-09-06 14:24:52.032  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.031+0300 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2020-09-06 14:24:52.033  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.031+0300 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-09-06 14:24:52.033  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.031+0300 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2020-09-06 14:24:52.033  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.031+0300 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2020-09-06 14:24:52.033  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.032+0300 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-58690.sock
+2020-09-06 14:24:52.033  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.032+0300 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2020-09-06 14:24:52.033  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.032+0300 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-09-06 14:24:52.035  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.035+0300 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-09-06 14:24:52.046  INFO 3216 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:24:52.069  INFO 3216 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:2}] to localhost:58690 because the pool has been closed.
+2020-09-06 14:24:52.070  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.070+0300 I -        [conn2] end connection 127.0.0.1:58696 (2 connections now open)
+2020-09-06 14:24:52.070  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.070+0300 I -        [conn1] end connection 127.0.0.1:58695 (1 connection now open)
+2020-09-06 14:24:52.099  WARN 3216 --- [SpringContextShutdownHook] d.flapdoodle.embed.mongo.runtime.Mongod  : sendShutdown /127.0.0.1:58690
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:591) ~[na:na]
+	at de.flapdoodle.embed.mongo.runtime.Mongod.sendShutdown(Mongod.java:88) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.sendStopToMongoInstance(AbstractMongoProcess.java:133) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.stopInternal(AbstractMongoProcess.java:107) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.process.runtime.AbstractProcess.stop(AbstractProcess.java:177) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at de.flapdoodle.embed.process.runtime.Executable.stop(Executable.java:80) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+
+2020-09-06 14:24:52.169  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.169+0300 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-09-06 14:24:52.170  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.169+0300 I CONTROL  [signalProcessingThread] now exiting
+2020-09-06 14:24:52.170  INFO 3216 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:24:52.169+0300 I CONTROL  [signalProcessingThread] shutting down with code:0
+2020-09-06 14:24:52.204  WARN 3216 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod with db command, try next
+2020-09-06 14:24:52.230  INFO 3216 --- [SpringContextShutdownHook] d.f.e.process.runtime.ProcessControl     : execSuccess: false [kill, -2, 3217]
+2020-09-06 14:24:52.230  WARN 3216 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod, try next
+2020-09-06 14:24:52.230  WARN 3216 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod the second time, try one last thing
+2020-09-06 14:26:06.108  INFO 3227 --- [main] c.e.M.OfflineMessagingApiApplication     : Starting OfflineMessagingApiApplication on Merts-MacBook-Pro.local with PID 3227 (/Users/mertsariozkan/Desktop/MessagingAPI/target/classes started by mertsariozkan in /Users/mertsariozkan/Desktop/MessagingAPI)
+2020-09-06 14:26:06.112  INFO 3227 --- [main] c.e.M.OfflineMessagingApiApplication     : No active profile set, falling back to default profiles: default
+2020-09-06 14:26:07.125  INFO 3227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-09-06 14:26:07.187  INFO 3227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 3 MongoDB repository interfaces.
+2020-09-06 14:26:07.429  INFO 3227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:07.431  INFO 3227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:07.434  INFO 3227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5918c260' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:07.435  INFO 3227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:07.438  INFO 3227 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:07.684  INFO 3227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-06 14:26:07.692  INFO 3227 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-06 14:26:07.692  INFO 3227 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-06 14:26:07.803  INFO 3227 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-06 14:26:07.803  INFO 3227 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1629 ms
+2020-09-06 14:26:08.135  INFO 3227 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-09-06 14:26:08.177  INFO 3227 --- [cluster-ClusterId{value='5f54c750c164684b84866d45', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:591) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-3.11.2.jar:na]
+	... 3 common frames omitted
+
+2020-09-06 14:26:08.341  WARN 3227 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2020-09-06 14:26:08.373  INFO 3227 --- [main] org.mongodb.driver.cluster               : Cluster description not yet available. Waiting for 30000 ms before timing out
+2020-09-06 14:26:42.167  INFO 3233 --- [main] c.e.M.OfflineMessagingApiApplication     : Starting OfflineMessagingApiApplication on Merts-MacBook-Pro.local with PID 3233 (/Users/mertsariozkan/Desktop/MessagingAPI/target/classes started by mertsariozkan in /Users/mertsariozkan/Desktop/MessagingAPI)
+2020-09-06 14:26:42.173  INFO 3233 --- [main] c.e.M.OfflineMessagingApiApplication     : No active profile set, falling back to default profiles: default
+2020-09-06 14:26:42.872  INFO 3233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-09-06 14:26:42.931  INFO 3233 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 3 MongoDB repository interfaces.
+2020-09-06 14:26:43.166  INFO 3233 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:43.168  INFO 3233 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:43.170  INFO 3233 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b9632d1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:43.172  INFO 3233 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:43.174  INFO 3233 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:26:43.365  INFO 3233 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-06 14:26:43.375  INFO 3233 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-06 14:26:43.376  INFO 3233 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-06 14:26:43.487  INFO 3233 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-06 14:26:43.488  INFO 3233 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1266 ms
+2020-09-06 14:26:43.936  INFO 3233 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=cluster0.5g4nh.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500, requiredReplicaSetName='atlas-11nou0-shard-0'}
+2020-09-06 14:26:44.025  INFO 3233 --- [cluster-ClusterId{value='5f54c7730856c1638af798df', description='null'}-srv-cluster0.5g4nh.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-00.5g4nh.mongodb.net:27017 to client view of cluster
+2020-09-06 14:26:44.056  INFO 3233 --- [cluster-ClusterId{value='5f54c7730856c1638af798df', description='null'}-srv-cluster0.5g4nh.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-01.5g4nh.mongodb.net:27017 to client view of cluster
+2020-09-06 14:26:44.058  INFO 3233 --- [cluster-ClusterId{value='5f54c7730856c1638af798df', description='null'}-srv-cluster0.5g4nh.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-02.5g4nh.mongodb.net:27017 to client view of cluster
+2020-09-06 14:26:44.160  WARN 3233 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2020-09-06 14:26:44.191  INFO 3233 --- [main] org.mongodb.driver.cluster               : No server chosen by com.mongodb.client.internal.MongoClientDelegate$1@58833798 from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=cluster0-shard-00-00.5g4nh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=cluster0-shard-00-01.5g4nh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=cluster0-shard-00-02.5g4nh.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2020-09-06 14:26:45.101  INFO 3233 --- [cluster-ClusterId{value='5f54c7730856c1638af798df', description='null'}-cluster0-shard-00-02.5g4nh.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-02.5g4nh.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:580) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:445) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:299) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:259) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:105) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:129) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2020-09-06 14:26:45.102  INFO 3233 --- [cluster-ClusterId{value='5f54c7730856c1638af798df', description='null'}-cluster0-shard-00-00.5g4nh.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-00.5g4nh.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:580) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:445) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:299) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:259) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:105) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:129) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2020-09-06 14:26:47.715  INFO 3233 --- [cluster-ClusterId{value='5f54c7730856c1638af798df', description='null'}-cluster0-shard-00-01.5g4nh.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server cluster0-shard-00-01.5g4nh.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Prematurely reached end of stream
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:112) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:580) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:445) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:299) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:259) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:105) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:62) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:129) ~[mongodb-driver-core-3.11.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117) ~[mongodb-driver-core-3.11.2.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2020-09-06 14:27:21.046  INFO 3237 --- [main] c.e.M.OfflineMessagingApiApplication     : Starting OfflineMessagingApiApplication on Merts-MacBook-Pro.local with PID 3237 (/Users/mertsariozkan/Desktop/MessagingAPI/target/classes started by mertsariozkan in /Users/mertsariozkan/Desktop/MessagingAPI)
+2020-09-06 14:27:21.052  INFO 3237 --- [main] c.e.M.OfflineMessagingApiApplication     : No active profile set, falling back to default profiles: default
+2020-09-06 14:27:21.928  INFO 3237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-09-06 14:27:21.987  INFO 3237 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 3 MongoDB repository interfaces.
+2020-09-06 14:27:22.232  INFO 3237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:27:22.234  INFO 3237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:27:22.235  INFO 3237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6f139fc9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:27:22.236  INFO 3237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:27:22.238  INFO 3237 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-06 14:27:22.432  INFO 3237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-06 14:27:22.440  INFO 3237 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-06 14:27:22.441  INFO 3237 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-09-06 14:27:22.544  INFO 3237 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-06 14:27:22.544  INFO 3237 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1444 ms
+2020-09-06 14:27:23.432  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
+2020-09-06 14:27:23.438  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten] MongoDB starting : pid=3238 port=58820 dbpath=/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-6f819bec-1800-4bae-aac4-054173e8abcc 64-bit host=Merts-MacBook-Pro.local
+2020-09-06 14:27:23.438  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten] db version v3.5.5
+2020-09-06 14:27:23.439  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+2020-09-06 14:27:23.439  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten] allocator: system
+2020-09-06 14:27:23.439  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten] modules: none
+2020-09-06 14:27:23.439  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten] build environment:
+2020-09-06 14:27:23.439  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten]     distarch: x86_64
+2020-09-06 14:27:23.439  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-09-06 14:27:23.440  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.437+0300 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 58820 }, security: { authorization: "disabled" }, storage: { dbPath: "/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-6f819bec-1800-4bae-aac4-054173e8abcc", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true }, syncPeriodSecs: 0.0 } }
+2020-09-06 14:27:23.440  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.439+0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=0,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+2020-09-06 14:27:23.675  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.675+0300 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2020-09-06 14:27:23.676  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.675+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:27:23.676  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.675+0300 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+2020-09-06 14:27:23.677  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.675+0300 I CONTROL  [initandlisten] **       Not recommended for production.
+2020-09-06 14:27:23.677  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.675+0300 I CONTROL  [initandlisten] 
+2020-09-06 14:27:23.745  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.745+0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/var/folders/3q/w3zvcp697k9_fqmtxsdk1zn80000gn/T/embedmongo-db-6f819bec-1800-4bae-aac4-054173e8abcc/diagnostic.data'
+2020-09-06 14:27:23.851  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.851+0300 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2020-09-06 14:27:23.852  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.851+0300 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:27:23.856  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.856+0300 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:27:23.857  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.857+0300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2020-09-06 14:27:23.857  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:23.857+0300 I NETWORK  [thread1] waiting for connections on port 58820
+2020-09-06 14:27:23.858  INFO 3237 --- [main] d.f.embed.mongo.MongodExecutable         : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@40de8f93
+2020-09-06 14:27:24.077  INFO 3237 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:58820], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-09-06 14:27:24.077  INFO 3237 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:58820 to client view of cluster
+2020-09-06 14:27:24.116  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.116+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58827 #1 (1 connection now open)
+2020-09-06 14:27:24.123  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.123+0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:58827 conn1: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:27:24.134  INFO 3237 --- [cluster-ClusterId{value='5f54c79cb5f3847626b9749e', description='null'}-localhost:58820] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:58820
+2020-09-06 14:27:24.136  INFO 3237 --- [cluster-ClusterId{value='5f54c79cb5f3847626b9749e', description='null'}-localhost:58820] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:58820, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1257375}
+2020-09-06 14:27:24.138  INFO 3237 --- [cluster-ClusterId{value='5f54c79cb5f3847626b9749e', description='null'}-localhost:58820] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2020-09-06 14:27:24.269  WARN 3237 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2020-09-06 14:27:24.309  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.308+0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:58828 #2 (2 connections now open)
+2020-09-06 14:27:24.310  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.310+0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:58828 conn2: { driver: { name: "mongo-java-driver|legacy", version: "3.11.2" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "10.15.2" }, platform: "Java/Oracle Corporation/11.0.2+9-LTS" }
+2020-09-06 14:27:24.313  INFO 3237 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:58820
+2020-09-06 14:27:24.440  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.440+0300 I INDEX    [conn2] build index on: test.chat_users properties: { v: 2, unique: true, key: { username: 1 }, name: "username", ns: "test.chat_users" }
+2020-09-06 14:27:24.441  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.440+0300 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-09-06 14:27:24.444  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.444+0300 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-09-06 14:27:24.445  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:24.444+0300 I COMMAND  [conn2] command test.$cmd command: createIndexes { createIndexes: "chat_users", indexes: [ { key: { username: 1 }, name: "username", ns: "test.chat_users", unique: true } ] } numYields:0 reslen:113 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_query 120ms
+2020-09-06 14:27:24.971  INFO 3237 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71e2c6d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@3bd08435, org.springframework.security.web.header.HeaderWriterFilter@3214bad, org.springframework.web.filter.CorsFilter@4228f269, org.springframework.security.web.authentication.logout.LogoutFilter@5d5d3a5c, com.example.MessagingAPI.security.AuthTokenFilter@5939e24, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a96d639, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23e2c1ca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@376b5cb2, org.springframework.security.web.session.SessionManagementFilter@5170bc02, org.springframework.security.web.access.ExceptionTranslationFilter@27df5806, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@762405bf]
+2020-09-06 14:27:25.025  INFO 3237 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:27:25.123  INFO 3237 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-06 14:27:25.126  INFO 3237 --- [main] c.e.M.OfflineMessagingApiApplication     : Started OfflineMessagingApiApplication in 4.599 seconds (JVM running for 5.536)
+2020-09-06 14:27:36.408  INFO 3237 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-06 14:27:36.408  INFO 3237 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-06 14:27:36.416  INFO 3237 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-09-06 14:27:36.867 ERROR 3237 --- [http-nio-8080-exec-1] c.e.M.controller.AuthController          : INVALID LOGIN: 'selenay' couldn't login.
+2020-09-06 14:27:38.936  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.935+0300 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2020-09-06 14:27:38.938  INFO 3237 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-06 14:27:38.940  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.935+0300 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-09-06 14:27:38.941  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.935+0300 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2020-09-06 14:27:38.942  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.935+0300 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2020-09-06 14:27:38.943  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.936+0300 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-58820.sock
+2020-09-06 14:27:38.944  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.940+0300 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2020-09-06 14:27:38.945  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.940+0300 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-09-06 14:27:38.953  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.953+0300 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-09-06 14:27:38.955  INFO 3237 --- [SpringContextShutdownHook] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:2}] to localhost:58820 because the pool has been closed.
+2020-09-06 14:27:38.957  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.957+0300 I -        [conn2] end connection 127.0.0.1:58828 (2 connections now open)
+2020-09-06 14:27:38.965  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:38.965+0300 I -        [conn1] end connection 127.0.0.1:58827 (1 connection now open)
+2020-09-06 14:27:38.978  WARN 3237 --- [SpringContextShutdownHook] d.flapdoodle.embed.mongo.runtime.Mongod  : sendShutdown /127.0.0.1:58820
+
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:591) ~[na:na]
+	at de.flapdoodle.embed.mongo.runtime.Mongod.sendShutdown(Mongod.java:88) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.sendStopToMongoInstance(AbstractMongoProcess.java:133) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.mongo.AbstractMongoProcess.stopInternal(AbstractMongoProcess.java:107) ~[de.flapdoodle.embed.mongo-2.2.0.jar:na]
+	at de.flapdoodle.embed.process.runtime.AbstractProcess.stop(AbstractProcess.java:177) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at de.flapdoodle.embed.process.runtime.Executable.stop(Executable.java:80) ~[de.flapdoodle.embed.process-2.1.2.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) ~[spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+
+2020-09-06 14:27:39.050  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:39.049+0300 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-09-06 14:27:39.050  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:39.050+0300 I CONTROL  [signalProcessingThread] now exiting
+2020-09-06 14:27:39.050  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:39.050+0300 I CONTROL  [signalProcessingThread] shutting down with code:0
+2020-09-06 14:27:39.050  INFO 3237 --- [Thread-1] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-09-06T14:27:39.050+0300 I CONTROL  [initandlisten] shutting down with code:0
+2020-09-06 14:27:39.080  WARN 3237 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod with db command, try next
+2020-09-06 14:27:39.122  INFO 3237 --- [SpringContextShutdownHook] d.f.e.process.runtime.ProcessControl     : execSuccess: false [kill, -2, 3238]
+2020-09-06 14:27:39.123  WARN 3237 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod, try next
+2020-09-06 14:27:39.123  WARN 3237 --- [SpringContextShutdownHook] d.f.embed.mongo.AbstractMongoProcess     : could not stop mongod the second time, try one last thing
